@@ -3,7 +3,15 @@
 ShadeStash is an iOS app that allows users to generate and store color cards locally and in the cloud, with full offline support and real-time sync.  
 It uses **Swift**, **SwiftUI**, and **SwiftData** for local storage, and **Firebase Firestore** for cloud storage.  
 The app also integrates **Apple Intelligence** (iOS 26+) for color insights, authentication via **Apple** and **Google**, and real-time network status monitoring.
-<img src="https://drive.google.com/uc?export=view&id=1htxZav1grxjbW_ztZRlnf2g0g_fIGtsr" alt="My Image" width="150"/>
+---
+---
+<img src="https://drive.google.com/uc?export=view&id=1htxZav1grxjbW_ztZRlnf2g0g_fIGtsr" alt="Image 1" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1o8CHeVzsHqMlABYO249fZwrR11bX2z2N" alt="Image 2" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1o8CHeVzsHqMlABYO249fZwrR11bX2z2N" alt="Image 3" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1cPRWm0OVJcnl0JQEQIRtexK-0ij-1dIS" alt="Image 4" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1K6vAreXUeB3KO5tcKQs8YLcBq5z3t8be" alt="Image 5" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1q3rf-hU8Y7doZktyS5bOSNhamCIAcA8t" alt="Image 6" width="150"/><br/>
+<img src="https://drive.google.com/uc?export=view&id=1nGA9qXfG5VlCHm1qC7RMSjui_LuGQ3Ne" alt="Image 7" width="150"/><br/>
 
 ---
 
