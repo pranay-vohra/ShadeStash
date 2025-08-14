@@ -17,7 +17,7 @@ struct AddColourCardUIView: View {
     @StateObject var viewModel = DataViewModel()
     
     var body: some View {
-        NavigationStack{
+    
             VStack{
                 ColourCasrdUIView(hexCode: $hexCode, colourName: $colourName,ignoreAI: .constant(true))
                 
@@ -54,7 +54,7 @@ struct AddColourCardUIView: View {
                     TextField("Colour Name", text: $colourName)
                 }
             }
-            .navigationTitle("Add a card")
+         
             .toolbar{
                 ToolbarItem{
                     Button("Done"){
@@ -77,7 +77,7 @@ struct AddColourCardUIView: View {
             }
         }
         
-    }
+    
 }
 
 extension Color {

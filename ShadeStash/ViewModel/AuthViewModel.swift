@@ -49,7 +49,7 @@ enum AuthenticationError: Error, LocalizedError {
 class AuthViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var isValid: Bool  = false
-    @Published var authenticationState: AuthenticationState = .unauthenticated
+    @Published var authenticationState: AuthenticationState = .authenticating
     @Published var errorMessage: String = ""
     @Published var user: User?
     @Published var displayName: String = ""
@@ -71,12 +71,12 @@ class AuthViewModel: ObservableObject {
     
     private func configureGoogleSignIn() {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
-            print("❌ No client ID found in Firebase configuration")
+            print("No client ID found in Firebase configuration")
             return
         }
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
-        print("✅ Google Sign-In configured successfully")
+        print("Google Sign-In configured successfully")
     }
     
     func registerAuthStateHandler() {
@@ -91,9 +91,9 @@ class AuthViewModel: ObservableObject {
                     self.email = user?.email ?? ""
                     
                     if user != nil {
-                        print("✅ User authenticated: \(user?.email ?? "unknown")")
+                        print("User authenticated: \(user?.email ?? "unknown")")
                     } else {
-                        print("🔐 User signed out")
+                        print("User signed out")
                     }
                 }
             }
@@ -123,9 +123,9 @@ extension AuthViewModel {
             displayName = ""
             email = ""
             authenticationState = .unauthenticated
-            print("✅ User signed out successfully")
+            print(" User signed out successfully")
         }catch {
-            print("❌ Sign out error: \(error)")
+            print(" Sign out error: \(error)")
             errorMessage = error.localizedDescription
         }
     }
@@ -139,10 +139,10 @@ extension AuthViewModel {
         
         do {
             try await user.delete()
-            print("✅ User account deleted successfully")
+            print("User account deleted successfully")
             return true
         } catch {
-            print("❌ Delete account error: \(error)")
+            print(" Delete account error: \(error)")
             errorMessage = error.localizedDescription
             return false
         }
@@ -174,7 +174,7 @@ extension AuthViewModel {
                 throw AuthenticationError.configurationError(message: "No root view controller found")
             }
             
-            print("🔐 Starting Google Sign-In...")
+            print("Starting Google Sign-In...")
             
             // Perform Google Sign In
             let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
@@ -186,7 +186,7 @@ extension AuthViewModel {
             
             let accessToken = user.accessToken.tokenString
             
-            print("🔑 Tokens obtained, signing in with Firebase...")
+            print("Tokens obtained, signing in with Firebase...")
             
             // Create Firebase credential
             let credential = GoogleAuthProvider.credential(
@@ -198,20 +198,20 @@ extension AuthViewModel {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             
-            print("✅ User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             
             authenticationState = .authenticated
             return true
             
         } catch let error as NSError {
-            print("❌ Google Sign-In error: \(error)")
+            print(" Google Sign-In error: \(error)")
             
             authenticationState = .unauthenticated
             
             // Handle specific error cases
             if error.domain == "com.google.GIDSignIn" && error.code == -5 {
                 // User cancelled
-                print("🚫 User cancelled sign in")
+                print(" User cancelled sign in")
                 return false // Don't show error message for cancellation
             } else if error.localizedDescription.contains("network") {
                 errorMessage = AuthenticationError.networkError(message: "Please check your internet connection").localizedDescription
@@ -275,7 +275,7 @@ extension AuthViewModel{
                     return
                 }
 
-                // Set displayName if available from Apple (only on first sign-in)
+
                 if let fullName = appleIDCredential.fullName {
                     let formatter = PersonNameComponentsFormatter()
                     let name = formatter.string(from: fullName)
@@ -299,7 +299,7 @@ extension AuthViewModel{
             }
 
         case .failure(let error):
-            print("❌ Apple Sign In failed: \(error.localizedDescription)")
+            print("Apple Sign In failed: \(error.localizedDescription)")
             self.errorMessage = error.localizedDescription
         }
     }

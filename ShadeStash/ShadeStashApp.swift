@@ -32,16 +32,16 @@ struct ShadeStashApp: App {
                 .environmentObject(authViewModel)
                 .modelContainer(for: [Card.self])
                 .onAppear {
-                    print("🚀 App launched - Network: \(networkMonitor.isConnected ? "Connected" : "Disconnected")")
+                    print(" App launched - Network: \(networkMonitor.isConnected ? "Connected" : "Disconnected")")
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-                    print("📱 App will resign active")
+                    print(" App will resign active")
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                    print("📱 App did become active - Network: \(networkMonitor.isConnected ? "Connected" : "Disconnected")")
+                    print("App did become active - Network: \(networkMonitor.isConnected ? "Connected" : "Disconnected")")
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.willTerminateNotification)) { _ in
-                    print("📱 App will terminate")
+                    print("App will terminate")
                     networkMonitor.stopMonitoring()
                 }
         }

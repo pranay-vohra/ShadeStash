@@ -9,9 +9,8 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        // Your app logo or loading indicator
+ 
         VStack {
-            // App logo or branding
             ProgressView()
                 .padding(.top)
         }

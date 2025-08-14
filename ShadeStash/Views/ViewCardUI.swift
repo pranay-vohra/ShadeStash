@@ -14,6 +14,7 @@ struct ViewCardUI: View {
     let colourName:String
     let ignoreAI:Bool
     @ObservedObject var viewModel:GenerateIntel
+    @Binding var showSheet:Bool
     var body: some View {
         VStack{
             HStack{
@@ -27,7 +28,9 @@ struct ViewCardUI: View {
                 if #available(iOS 26.0, *), !ignoreAI{
                     Button{
                         //foundational model
+                        showSheet.toggle()
                         viewModel.genResponse(hexCode: hexCode)
+                        
                         
                     } label: {
                         Image(systemName: "apple.intelligence")

@@ -52,19 +52,53 @@ struct HomeUIView: View {
             }
             .overlay(addButtonOverlay, alignment: .bottomTrailing)
             .sheet(isPresented: $homeViewModel.showAddSheet) {
-                AddColourCardUIView()
-            }
+                  NavigationStack {
+                      AddColourCardUIView()
+                  }
+                  .presentationDetents([.medium, .large])
+              }
             .sheet(isPresented: $showAiSheet) {
                 VStack {
-                    Text("AI Suggestions")
-                        .font(.title)
-                        .padding()
+                    
+                    Text("Apple Intelligence")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.clear) // Make text transparent
+                        .overlay(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    Color.blue,
+                                    Color.purple,
+                                    Color.pink,
+                                    Color.orange
+                                ]),
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .mask(
+                            Text("Apple Intelligence")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                        )
+                    
                     ScrollView {
-                        Text(aiViewModel.responseContent)
-                            .multilineTextAlignment(.leading)
-                            .padding()
+                        
+                        if(aiViewModel.generatedText.isEmpty){
+                            Spacer()
+                            Text("Loading...")
+                                .multilineTextAlignment(.center)
+                                .padding()
+                        }else{
+                            Text(aiViewModel.generatedText)
+                                .multilineTextAlignment(.leading)
+                                .padding()
+                        }
                     }
                     
+                }
+                .onDisappear {
+                    aiViewModel.generatedText = ""
                 }
             }
         }
@@ -300,7 +334,8 @@ struct HomeUIView: View {
                         hexCode: card.hexCode,
                         colourName: card.colourName,
                         ignoreAI: false,
-                        viewModel: aiViewModel
+                        viewModel: aiViewModel,
+                        showSheet: $showAiSheet
                     )
                     .contextMenu {
                         if(networkMonitor.isConnected){
@@ -316,10 +351,6 @@ struct HomeUIView: View {
         }
     }
     
-
-    private func AiSheet(hexCode:String){
-        showAiSheet = true
-    }
     
     private func deleteCard(_ card: Card) {
         guard let userId = authViewModel.user?.uid else {

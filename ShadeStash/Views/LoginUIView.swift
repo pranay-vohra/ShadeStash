@@ -20,7 +20,6 @@ struct LoginUIView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                // Top section with welcome text
                 VStack(spacing: 16) {
                     Text("Welcome")
                         .font(.title2)
@@ -52,7 +51,7 @@ struct LoginUIView: View {
                 
                 Spacer()
               
-                // Bottom section with Google sign in
+
                 VStack(spacing: 24) {
                     // Error Message
                     if !viewModel.errorMessage.isEmpty {
@@ -78,10 +77,9 @@ struct LoginUIView: View {
                     
                     HStack {
                         SignInWithAppleButton(.signIn) { request in
-                            // This is still needed for the button setup
+                    
                             viewModel.startSignInWithAppleFlow()
                         } onCompletion: { result in
-                            // Replace the old completion handler with the new async method
                             switch result {
                             case .success:
                                 viewModel.authenticationState = .authenticating
@@ -177,7 +175,6 @@ struct LoginUIView: View {
             }
         }
         .onAppear {
-            // Clear any previous errors when view appears
             viewModel.clearError()
         }
     }
@@ -186,8 +183,8 @@ struct LoginUIView: View {
         Task {
             let success = await viewModel.signInWithGoogle()
             if success {
-                print("✅ Sign in successful")
-                // Navigation will be handled automatically by the authentication state change
+                print(" Sign in successful")
+
             }
         }
     }

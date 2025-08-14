@@ -9,10 +9,13 @@ import Foundation
 import FoundationModels
 
 @available(iOS 26.0, *)
+@MainActor
 class GenerateIntel:  ObservableObject {
     @Published var model = SystemLanguageModel.default
     @Published var responseContent:String = ""
     @Published var generatedText: String = ""
+    @Published var isGenerating = false
+
     static let instructions = """
     You are a creative colour expert. I will give you a colour in hexadecimal format. Your job is to:
     
@@ -35,24 +38,22 @@ class GenerateIntel:  ObservableObject {
     init() {
         self.session = LanguageModelSession(instructions: GenerateIntel.instructions)
     }
-    
-    func genResponse(hexCode:String){
+    func genResponse(hexCode: String) {
+        guard !isGenerating else { return }
+        isGenerating = true
         let prompt = "Here is the colour: #\(hexCode)"
-        Task.detached { [weak self] in
-            guard let self = self else { return }
+        Task {
+            defer { self.isGenerating = false }
             do {
                 let response = try await self.session.respond(to: prompt)
-                await MainActor.run {
-                    self.responseContent = response.content
-                    self.generatedText = response.content
-                    print(self.responseContent)
-                }
+                self.responseContent = response.content
+                self.generatedText = response.content
+                print(self.responseContent)
             } catch {
-                await MainActor.run {
-                    self.responseContent = "Failed to generate response."
-                    self.generatedText = self.responseContent
-                }
+                self.responseContent = "Failed to generate response."
+                self.generatedText = self.responseContent
                 print("GenerateIntel error: \(error)")
-            }    }
+            }
+        }
     }
 }

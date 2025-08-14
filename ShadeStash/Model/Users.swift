@@ -11,7 +11,7 @@ import FirebaseFirestoreCombineSwift
 
 
 struct Users: Identifiable,Codable{
-    @DocumentID var id:String? //user uuid
+    @DocumentID var id:String? 
     var savedColours:[CardFirestore]
     
     init(id: String? = nil, savedColours: [CardFirestore] = []) {

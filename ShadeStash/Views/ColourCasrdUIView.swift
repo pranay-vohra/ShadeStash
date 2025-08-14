@@ -12,9 +12,6 @@ struct ColourCasrdUIView: View {
     @Binding var hexCode:String
     @Binding var colourName:String
     @Binding var ignoreAI:Bool
-    //demo properrties
-//    @State private var hexCode:String = "C8A2C8"
-//    @State private var colourName:String = "Red"
     
     var body: some View {
         VStack{

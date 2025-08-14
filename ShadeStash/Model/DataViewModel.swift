@@ -17,12 +17,10 @@ class DataViewModel: ObservableObject{
     
     func addColourCard(userId: String, card: Card) async throws {
         let userRef = db.collection("Users").document(userId)
-        
-        // Convert SwiftData Card to Firestore-compatible Card
+    
         let firestoreCard = CardFirestore(from: card)
         
         do {
-            // Use arrayUnion to add the card
             try await userRef.setData([
                 "savedColours": FieldValue.arrayUnion([try Firestore.Encoder().encode(firestoreCard)])
             ], merge: true)
@@ -35,8 +33,7 @@ class DataViewModel: ObservableObject{
     
     func deleteColourCard(userId: String, card: Card) async throws{
         let userRef = db.collection("Users").document(userId)
-        
-        // Fetch the current user's document
+       
         let documentSnapshot = try await userRef.getDocument()
         
         guard let data = documentSnapshot.data(),
@@ -45,7 +42,6 @@ class DataViewModel: ObservableObject{
             return
         }
         
-        // Find the exact matching dictionary where id matches card.id
         if let matchingCardDict = savedColours.first(where: { dict in
             if let id = dict["id"] as? String {
                 return id == card.id.uuidString
@@ -53,7 +49,7 @@ class DataViewModel: ObservableObject{
             return false
         }) {
             do {
-                // Use arrayRemove to delete the exact card dictionary
+               
                 try await userRef.updateData([
                     "savedColours": FieldValue.arrayRemove([matchingCardDict])
                 ])
