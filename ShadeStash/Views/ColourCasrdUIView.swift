@@ -28,7 +28,7 @@ struct ColourCasrdUIView: View {
                 
                 if(!ignoreAI){
                     Button{
-                        //foundational model
+                     
                     } label: {
                         Image(systemName: "apple.intelligence")
                             .resizable()

@@ -8,13 +8,15 @@
 import SwiftUI
 import SwiftData
 
+@available(iOS 26.0, *)
 struct HomeUIView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     @EnvironmentObject var networkMonitor: NetworkMonitor
     @Environment(\.modelContext) var context
     @StateObject var dataViewModel = DataViewModel()
     @StateObject private var homeViewModel = HomeViewModel()
-    
+    @StateObject var aiViewModel = GenerateIntel()
+    @State private var showAiSheet = false
     // SwiftData cards (offline fallback)
     @Query(sort: \Card.date) var localCards: [Card]
     
@@ -51,6 +53,19 @@ struct HomeUIView: View {
             .overlay(addButtonOverlay, alignment: .bottomTrailing)
             .sheet(isPresented: $homeViewModel.showAddSheet) {
                 AddColourCardUIView()
+            }
+            .sheet(isPresented: $showAiSheet) {
+                VStack {
+                    Text("AI Suggestions")
+                        .font(.title)
+                        .padding()
+                    ScrollView {
+                        Text(aiViewModel.responseContent)
+                            .multilineTextAlignment(.leading)
+                            .padding()
+                    }
+                    
+                }
             }
         }
         .onAppear {
@@ -284,7 +299,8 @@ struct HomeUIView: View {
                     ViewCardUI(
                         hexCode: card.hexCode,
                         colourName: card.colourName,
-                        ignoreAI: false
+                        ignoreAI: false,
+                        viewModel: aiViewModel
                     )
                     .contextMenu {
                         if(networkMonitor.isConnected){
@@ -300,7 +316,10 @@ struct HomeUIView: View {
         }
     }
     
-    // MARK: - Delete Card Function
+
+    private func AiSheet(hexCode:String){
+        showAiSheet = true
+    }
     
     private func deleteCard(_ card: Card) {
         guard let userId = authViewModel.user?.uid else {

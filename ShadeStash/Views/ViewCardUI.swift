@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+
+@available(iOS 26.0, *)
 struct ViewCardUI: View {
     let hexCode:String
     let colourName:String
     let ignoreAI:Bool
+    @ObservedObject var viewModel:GenerateIntel
     var body: some View {
         VStack{
             HStack{
@@ -21,9 +24,11 @@ struct ViewCardUI: View {
                 
                 Spacer()
                 
-                if(!ignoreAI){
+                if #available(iOS 26.0, *), !ignoreAI{
                     Button{
                         //foundational model
+                        viewModel.genResponse(hexCode: hexCode)
+                        
                     } label: {
                         Image(systemName: "apple.intelligence")
                             .resizable()

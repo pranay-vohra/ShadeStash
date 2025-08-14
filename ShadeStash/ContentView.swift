@@ -16,8 +16,10 @@ struct ContentView: View {
         case .authenticating:
             LoadingView()
         case .authenticated:
-            HomeUIView()
-                .environmentObject(authViewModel)
+            if #available(iOS 26.0, *) {
+                HomeUIView()
+                    .environmentObject(authViewModel)
+            }
         }
     }
 }
