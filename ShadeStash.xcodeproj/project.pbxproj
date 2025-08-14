@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4CB5CE2E4A91E900122867 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4CB5CD2E4A91E900122867 /* FirebaseFirestoreCombine-Community */; };
+		8B4CB5D92E4A938000122867 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4CB5D82E4A938000122867 /* GoogleSignInSwift */; };
+		8B4CB5DB2E4A938500122867 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4CB5DA2E4A938500122867 /* GoogleSignIn */; };
+		8BA26C4A2E4A8D570018F3BA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA26C492E4A8D570018F3BA /* FirebaseCore */; };
+		8BA26C4C2E4A8D630018F3BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA26C4B2E4A8D630018F3BA /* FirebaseAuth */; };
+		8BA26C4E2E4A8D730018F3BA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA26C4D2E4A8D730018F3BA /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BA26C212E4A84910018F3BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BA26C0B2E4A848F0018F3BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BA26C122E4A848F0018F3BA;
+			remoteInfo = ShadeStash;
+		};
+		8BA26C2B2E4A84910018F3BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BA26C0B2E4A848F0018F3BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BA26C122E4A848F0018F3BA;
+			remoteInfo = ShadeStash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8BA26C132E4A848F0018F3BA /* ShadeStash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadeStash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA26C202E4A84910018F3BA /* ShadeStashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadeStashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA26C2A2E4A84910018F3BA /* ShadeStashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadeStashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B4CB5DD2E4A93B800122867 /* Exceptions for "ShadeStash" folder in "ShadeStash" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8BA26C122E4A848F0018F3BA /* ShadeStash */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8BA26C152E4A848F0018F3BA /* ShadeStash */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8B4CB5DD2E4A93B800122867 /* Exceptions for "ShadeStash" folder in "ShadeStash" target */,
+			);
+			path = ShadeStash;
+			sourceTree = "<group>";
+		};
+		8BA26C232E4A84910018F3BA /* ShadeStashTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShadeStashTests;
+			sourceTree = "<group>";
+		};
+		8BA26C2D2E4A84910018F3BA /* ShadeStashUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ShadeStashUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BA26C102E4A848F0018F3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4CB5D92E4A938000122867 /* GoogleSignInSwift in Frameworks */,
+				8BA26C4A2E4A8D570018F3BA /* FirebaseCore in Frameworks */,
+				8B4CB5CE2E4A91E900122867 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				8BA26C4C2E4A8D630018F3BA /* FirebaseAuth in Frameworks */,
+				8BA26C4E2E4A8D730018F3BA /* FirebaseFirestore in Frameworks */,
+				8B4CB5DB2E4A938500122867 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C1D2E4A84910018F3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C272E4A84910018F3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BA26C0A2E4A848F0018F3BA = {
+			isa = PBXGroup;
+			children = (
+				8BA26C152E4A848F0018F3BA /* ShadeStash */,
+				8BA26C232E4A84910018F3BA /* ShadeStashTests */,
+				8BA26C2D2E4A84910018F3BA /* ShadeStashUITests */,
+				8BA26C482E4A8D570018F3BA /* Frameworks */,
+				8BA26C142E4A848F0018F3BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BA26C142E4A848F0018F3BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BA26C132E4A848F0018F3BA /* ShadeStash.app */,
+				8BA26C202E4A84910018F3BA /* ShadeStashTests.xctest */,
+				8BA26C2A2E4A84910018F3BA /* ShadeStashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BA26C482E4A8D570018F3BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BA26C122E4A848F0018F3BA /* ShadeStash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BA26C342E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStash" */;
+			buildPhases = (
+				8BA26C0F2E4A848F0018F3BA /* Sources */,
+				8BA26C102E4A848F0018F3BA /* Frameworks */,
+				8BA26C112E4A848F0018F3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8BA26C152E4A848F0018F3BA /* ShadeStash */,
+			);
+			name = ShadeStash;
+			packageProductDependencies = (
+				8BA26C492E4A8D570018F3BA /* FirebaseCore */,
+				8BA26C4B2E4A8D630018F3BA /* FirebaseAuth */,
+				8BA26C4D2E4A8D730018F3BA /* FirebaseFirestore */,
+				8B4CB5CD2E4A91E900122867 /* FirebaseFirestoreCombine-Community */,
+				8B4CB5D82E4A938000122867 /* GoogleSignInSwift */,
+				8B4CB5DA2E4A938500122867 /* GoogleSignIn */,
+			);
+			productName = ShadeStash;
+			productReference = 8BA26C132E4A848F0018F3BA /* ShadeStash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BA26C1F2E4A84910018F3BA /* ShadeStashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BA26C372E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStashTests" */;
+			buildPhases = (
+				8BA26C1C2E4A84910018F3BA /* Sources */,
+				8BA26C1D2E4A84910018F3BA /* Frameworks */,
+				8BA26C1E2E4A84910018F3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BA26C222E4A84910018F3BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8BA26C232E4A84910018F3BA /* ShadeStashTests */,
+			);
+			name = ShadeStashTests;
+			packageProductDependencies = (
+			);
+			productName = ShadeStashTests;
+			productReference = 8BA26C202E4A84910018F3BA /* ShadeStashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8BA26C292E4A84910018F3BA /* ShadeStashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BA26C3A2E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStashUITests" */;
+			buildPhases = (
+				8BA26C262E4A84910018F3BA /* Sources */,
+				8BA26C272E4A84910018F3BA /* Frameworks */,
+				8BA26C282E4A84910018F3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BA26C2C2E4A84910018F3BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8BA26C2D2E4A84910018F3BA /* ShadeStashUITests */,
+			);
+			name = ShadeStashUITests;
+			packageProductDependencies = (
+			);
+			productName = ShadeStashUITests;
+			productReference = 8BA26C2A2E4A84910018F3BA /* ShadeStashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BA26C0B2E4A848F0018F3BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					8BA26C122E4A848F0018F3BA = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					8BA26C1F2E4A84910018F3BA = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 8BA26C122E4A848F0018F3BA;
+					};
+					8BA26C292E4A84910018F3BA = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 8BA26C122E4A848F0018F3BA;
+					};
+				};
+			};
+			buildConfigurationList = 8BA26C0E2E4A848F0018F3BA /* Build configuration list for PBXProject "ShadeStash" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BA26C0A2E4A848F0018F3BA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8B4CB5D72E4A937600122867 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8BA26C142E4A848F0018F3BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BA26C122E4A848F0018F3BA /* ShadeStash */,
+				8BA26C1F2E4A84910018F3BA /* ShadeStashTests */,
+				8BA26C292E4A84910018F3BA /* ShadeStashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BA26C112E4A848F0018F3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C1E2E4A84910018F3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C282E4A84910018F3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BA26C0F2E4A848F0018F3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C1C2E4A84910018F3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BA26C262E4A84910018F3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BA26C222E4A84910018F3BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BA26C122E4A848F0018F3BA /* ShadeStash */;
+			targetProxy = 8BA26C212E4A84910018F3BA /* PBXContainerItemProxy */;
+		};
+		8BA26C2C2E4A84910018F3BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BA26C122E4A848F0018F3BA /* ShadeStash */;
+			targetProxy = 8BA26C2B2E4A84910018F3BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8BA26C322E4A84910018F3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8BA26C332E4A84910018F3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BA26C352E4A84910018F3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShadeStash/ShadeStash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G2927Z54Q6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShadeStash/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranay.ShadeStash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BA26C362E4A84910018F3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ShadeStash/ShadeStash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G2927Z54Q6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShadeStash/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pranay.ShadeStash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BA26C382E4A84910018F3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pranay.ShadeStashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadeStash.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShadeStash";
+			};
+			name = Debug;
+		};
+		8BA26C392E4A84910018F3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pranay.ShadeStashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadeStash.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShadeStash";
+			};
+			name = Release;
+		};
+		8BA26C3B2E4A84910018F3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pranay.ShadeStashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadeStash;
+			};
+			name = Debug;
+		};
+		8BA26C3C2E4A84910018F3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pranay.ShadeStashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShadeStash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BA26C0E2E4A848F0018F3BA /* Build configuration list for PBXProject "ShadeStash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA26C322E4A84910018F3BA /* Debug */,
+				8BA26C332E4A84910018F3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BA26C342E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA26C352E4A84910018F3BA /* Debug */,
+				8BA26C362E4A84910018F3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BA26C372E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA26C382E4A84910018F3BA /* Debug */,
+				8BA26C392E4A84910018F3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BA26C3A2E4A84910018F3BA /* Build configuration list for PBXNativeTarget "ShadeStashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BA26C3B2E4A84910018F3BA /* Debug */,
+				8BA26C3C2E4A84910018F3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B4CB5D72E4A937600122867 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B4CB5CD2E4A91E900122867 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		8B4CB5D82E4A938000122867 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B4CB5D72E4A937600122867 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		8B4CB5DA2E4A938500122867 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B4CB5D72E4A937600122867 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		8BA26C492E4A8D570018F3BA /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		8BA26C4B2E4A8D630018F3BA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8BA26C4D2E4A8D730018F3BA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BA26C472E4A8CF10018F3BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8BA26C0B2E4A848F0018F3BA /* Project object */;
+}
